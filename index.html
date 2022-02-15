@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap');</style>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <main class="container__global">
+    <section class="header__container">
+      <nav class="header__navegacao">
+        <div class="header__conteudo">
+          <img src="images/image-jeremy.png" alt="Foto do Jeremy" class="header__icon">
+          <div class="header__detalhes">
+            <p class="header__referencia">Report for</p>
+            <h1 class="header__nome">Jeremy Robson</h1>
+          </div>
+        </div>
+        <ul class="header__lista">
+            <li onclick="daily()" id="daily" class="header__botao"><a class="header__botao___link">Daily</a></li>
+            <li onclick="weekly()" id="weekly" class="header__botao"><a class="header__botao___link">Weekly</a></li>
+            <li onclick="monthly()" id="monthly" class="header__botao"><a class="header__botao___link">Monthly</a></li>
+        </ul>
+      </nav>
+    </section>
+    <!-- <section class="card__container"> -->
+      <article class="card">
+        <div class="card__icon__container card__work">
+          <img class="card__icon" src="images/icon-work.svg" alt="Work icon">
+        </div>
+        <div class="card__text___container">
+          <h4>Work</h4>
+          <img class="card__text___reticencias" src="images/icon-ellipsis.svg" alt="reticencias">
+          <p id="duracao__work" class="card__text___duracao">32hrs</p>
+          <p id="comparacao__work" class="card__text___comparacao">comparacao</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__icon__container card__play">
+          <img class="card__icon" src="images/icon-play.svg" alt="Play icon">
+        </div>
+        <div class="card__text___container">
+          <h4>Play</h4>
+          <img class="card__text___reticencias" src="images/icon-ellipsis.svg" alt="reticencias">
+          <p id="duracao__play" class="card__text___duracao">32hrs</p>
+          <p id="comparacao__play" class="card__text___comparacao">comparacao</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__icon__container card__study">
+          <img class="card__icon" src="images/icon-study.svg" alt="study icon">
+        </div>
+        <div class="card__text___container">
+          <h4>Study</h4>
+          <img class="card__text___reticencias" src="images/icon-ellipsis.svg" alt="reticencias">
+          <p id="duracao__study" class="card__text___duracao">32hrs</p>
+          <p id="comparacao__study" class="card__text___comparacao">comparacao</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__icon__container card__exercise">
+          <img class="card__icon" src="images/icon-exercise.svg" alt="exercise icon">
+        </div>
+        <div class="card__text___container">
+          <h4>Exercise</h4>
+          <img class="card__text___reticencias" src="images/icon-ellipsis.svg" alt="reticencias">
+          <p id="duracao__exercise" class="card__text___duracao">32hrs</p>
+          <p id="comparacao__exercise" class="card__text___comparacao">comparacao</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__icon__container card__social">
+          <img class="card__icon" src="images/icon-social.svg" alt="social icon">
+        </div>
+        <div class="card__text___container">
+          <h4>Social</h4>
+          <img class="card__text___reticencias" src="images/icon-ellipsis.svg" alt="reticencias">
+          <p id="duracao__social" class="card__text___duracao">32hrs</p>
+          <p id="comparacao__social" class="card__text___comparacao">comparacao</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__icon__container card__self-care">
+          <img class="card__icon" src="images/icon-self-care.svg" alt="self-care icon">
+        </div>
+        <div class="card__text___container">
+          <h4>Self care</h4>
+          <img class="card__text___reticencias" src="images/icon-ellipsis.svg" alt="reticencias">
+          <p id="duracao__self-cere" class="card__text___duracao">32hrs</p>
+          <p id="comparacao__self-care" class="card__text___comparacao"></p>
+        </div>
+      </article>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/JPougano">João Pedro Ougano</a>.
+  </div>
+</body>
+
+<script src="index.js"></script>
+</html>
