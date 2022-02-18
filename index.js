@@ -1,37 +1,32 @@
-function daily(){
-    var duracaoWork = document.getElementById('duracao__work');
-        duracaoWork.textContent = "5hrs";
+function daily (){
+    fetch('data.json').then(function(response){
+    return response.json();
+    }).then(function(data){
 
-    var comparacaoWork = document.getElementById('comparacao__work');
-        comparacaoWork.textContent = "Last day - 7hrs";
+var duracaoWork = document.querySelector('#duracao__work');
+var comparacaoWork = document.getElementById('comparacao__work');
 
-    var duracaoPlay = document.getElementById('duracao__play');
-        duracaoPlay.textContent = "1hr";
+var duracaoPlay = document.getElementById('duracao__play').innerHTML;
+var comparacaoPlay = document.getElementById('comparacao__play').innerHTML;
 
-    var comparacaoPlay = document.getElementById('comparacao__play');
-        comparacaoPlay.textContent = "Last day - 1hrs";
+var duracaoStudy = document.getElementById('duracao__study').innerHTML;
+var comparacaoStudy = document.getElementById('comparacao__study').innerHTML;
 
-    var duracaoStudy = document.getElementById('duracao__study');
-        duracaoStudy.textContent = "0hrs";
+var duracaoExercise = document.getElementById('duracao__exercise').innerHTML;
+var comparacaoExercise = document.getElementById('comparacao__exercise').innerHTML;
 
-    var comparacaoStudy = document.getElementById('comparacao__study');
-        comparacaoStudy.textContent = "Last day - 1hrs";
+var duracaoSocial = document.getElementById('duracao__social').innerHTML;
+var comparacaoSocial = document.getElementById('comparacao__social').innerHTML;
 
-    var duracaoExercise = document.getElementById('duracao__exercise');
-        duracaoExercise.textContent = "1hr";
+       if(data[0].timeframes.daily.current <2 || data[0].timeframes.daily.previous <2){
+            duracaoWork.innerHTML = data[0].timeframes.daily.current + 'hr'
+            comparacaoWork.innerHTML = data[0].timeframes.daily.previous + 'hr'
+       } else{
+            duracaoWork.innerHTML = data[0].timeframes.daily.current + 'hrs'
+            comparacaoWork.innerHTML = 'Last day - ' + data[0].timeframes.daily.previous + 'hrs'
+       }
 
-    var comparacaoExercise = document.getElementById('comparacao__exercise');
-        comparacaoExercise.textContent = "Last day - 1hr";
-
-    var duracaoSocial = document.getElementById('duracao__social');
-        duracaoSocial.textContent = "1hr";
-
-    var comparacaoSocial = document.getElementById('comparacao__social');
-        comparacaoSocial.textContent = "Last day - 3hrs";
-
-    var duracaoSelfCare = document.getElementById('duracao__self-care');
-        duracaoSelfCare.textContent = "0hrs";
-
-    var comparacaoSelfCare = document.getElementById('comparacao__self-care');
-        comparacaoSelfCare.textContent = "Last day - 1hrs";
+        console.log(data[0].timeframes.daily.current);
+    })
 }
+
